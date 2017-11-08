@@ -1,4 +1,3 @@
-
 # Data Refining script
 # Leverage tidyverse library bundle
 
@@ -18,7 +17,7 @@ refinedata$company <- sub(pattern = "^v.*", replacement = "Van Houten", x = refi
 
 refinedata <- separate(refinedata,col=Product.code...number, c("product_code","product_number"), sep = "-")
 
-# Step 3 - Add product cateegories
+# Step 3 - Add product category
 refinedata$product_category <- refinedata$product_code
 
 # Transalte product code to actual product
@@ -45,6 +44,3 @@ refinedata <- mutate(refinedata, product_tablet = ifelse(product_category == "Ta
 # Step 6 - save new file and Write the outputfile
 refine_clean <- refinedata
 write.csv(refine_clean,file="refine_clean.csv")
-
-
-
