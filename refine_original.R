@@ -1,4 +1,4 @@
-# Data Refining script
+# Data Wrangling Refining script
 # Leverage tidyverse library bundle
 
 library(tidyverse)
